@@ -1,0 +1,53 @@
+.header {
+  width: 1519px;
+  margin: 0 auto;
+  padding: 15px 0px;
+  background-image: linear-gradient(90deg, white 50%, #479cfc 50%);
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__second {
+  margin-top: 50px;
+  display: flex;
+  gap: 55px;
+}
+
+.header__link {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.07px;
+  text-align: left;
+  color: black;
+}
+
+.header__third {
+  margin-top: 40px;
+}
+
+.header__third {
+  padding-right: 10px;
+  
+  button {
+    @include btn();
+    font-weight: 600;
+    transition: all 0.1s;
+    position: relative;
+    
+    &::before {
+     @include btnbefore()
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: black;
+
+      &::before {
+        left: 14px; 
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@mixin d-flex($j-c: center, $flex-w: nowrap, $g: 10px) {
+  display: flex;
+  justify-content: $j-c;
+  align-items: center;
+  gap: $g;
+}
+
+@mixin btn(
+  $p: 14px 20px 14px 40px,
+  $bg-color: #333C4F,
+  $bor: none,
+  $bor-r: 30px,
+  $col: white
+) {
+  padding: $p;
+  background-color: $bg-color;
+  border: $bor;
+  border-radius: $bor-r;
+  color: $col;
+}
+
+@mixin btnbefore() {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url("./assets/button_arrow.png");
+  background-size: cover;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  transition: all 0.1s;
+}
